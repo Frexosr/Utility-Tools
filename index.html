@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utility Tools</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <link rel="stylesheet" href="css/qr-generator.css">
+    <link rel="stylesheet" href="css/password-generator.css">
+    <link rel="stylesheet" href="css/stopwatch.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛠️ Utility Tools</h1>
+            <p>All your essential tools in one place</p>
+        </header>
+
+        <div class="tools-grid">
+            <!-- Calculator -->
+            <div class="tool-card" id="calculator">
+                <h2>Calculator</h2>
+                <div class="calculator-display">0</div>
+                <div class="calculator-grid">
+                    <button class="calc-btn">7</button>
+                    <button class="calc-btn">8</button>
+                    <button class="calc-btn">9</button>
+                    <button class="calc-btn operator">÷</button>
+                    <button class="calc-btn">4</button>
+                    <button class="calc-btn">5</button>
+                    <button class="calc-btn">6</button>
+                    <button class="calc-btn operator">×</button>
+                    <button class="calc-btn">1</button>
+                    <button class="calc-btn">2</button>
+                    <button class="calc-btn">3</button>
+                    <button class="calc-btn operator">-</button>
+                    <button class="calc-btn">0</button>
+                    <button class="calc-btn">.</button>
+                    <button class="calc-btn equals">=</button>
+                    <button class="calc-btn operator">+</button>
+                    <button class="calc-btn clear" id="clear">Clear</button>
+                </div>
+            </div>
+
+            <!-- QR Code Generator -->
+            <div class="tool-card" id="qr-generator">
+                <h2>QR Code Generator</h2>
+                <input type="text" id="qr-text" placeholder="Enter text or URL">
+                <div id="qr-code"></div>
+            </div>
+
+            <!-- Password Generator -->
+            <div class="tool-card" id="password-generator">
+                <h2>Password Generator</h2>
+                <div class="password-options">
+                    <div class="length-control">
+                        <label>Password Length: <span id="length-value">12</span></label>
+                        <input type="range" id="password-length" min="8" max="32" value="12">
+                    </div>
+                    <label>
+                        <input type="checkbox" id="include-numbers" checked>
+                        Include Numbers
+                    </label>
+                    <label>
+                        <input type="checkbox" id="include-symbols" checked>
+                        Include Symbols
+                    </label>
+                </div>
+                <button id="generate-password">Generate Password</button>
+                <div class="password-result">
+                    <input type="text" id="password-output" readonly>
+                    <button id="copy-password">📋</button>
+                </div>
+            </div>
+
+            <!-- Stopwatch -->
+            <div class="tool-card" id="stopwatch">
+                <h2>Stopwatch</h2>
+                <div class="stopwatch-display">00:00.00</div>
+                <div class="stopwatch-controls">
+                    <button id="start-stop">Start</button>
+                    <button id="reset">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/calculator.js"></script>
+    <script src="js/qr-generator.js"></script>
+    <script src="js/password-generator.js"></script>
+    <script src="js/stopwatch.js"></script>
+</body>
+</html>

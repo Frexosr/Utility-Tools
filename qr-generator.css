@@ -1,0 +1,32 @@
+#qr-generator input {
+    margin-bottom: 1.5rem;
+}
+
+#qr-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    background-color: #f8fafc;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+#qr-code img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+#qr-code img:hover {
+    transform: scale(1.05);
+}
+
+#qr-code p {
+    color: #6b7280;
+    font-size: 1.1rem;
+    text-align: center;
+}
