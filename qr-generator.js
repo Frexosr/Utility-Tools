@@ -15,11 +15,12 @@ class QRGenerator {
             this.qrContainer.innerHTML = '<p style="color: #6b7280;">Enter text to generate QR code</p>';
             return;
         }
-
-        // Using Google Charts API for QR code generation
-        const qrUrl = `https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=${encodeURIComponent(text)}`;
-        this.qrContainer.innerHTML = `<img src="${qrUrl}" alt="QR Code">`;
+    
+        const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(text)}`;
+        this.qrContainer.innerHTML = `<img src="${qrUrl}" alt="QR Code" style="max-width: 100%;">`;
     }
 }
 
-new QRGenerator();
+document.addEventListener('DOMContentLoaded', () => {
+    new QRGenerator();
+});
